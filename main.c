@@ -11,7 +11,7 @@ float T,TSHOW;
 char TLOW,THIGHT;
 void main ()
 {
-	THIGHT=AT24C02_readbyte(0x01);
+	THIGHT=AT24C02_readbyte(0x01);                              //读取AT24C02中的值
 	TLOW=AT24C02_readbyte(0x02);
 	if(THIGHT>125|| TLOW<-55||THIGHT<TLOW){THIGHT=26;TLOW=12;}
 	LCD_Init();
